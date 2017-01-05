@@ -148,8 +148,8 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 2
     }
     
-    // MARK: BluetoothDelegate 
-    func didDiscoverPeripheral(_ peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
+    // MARK: BluetoothDelegate
+    func didDiscoverPeripheral(_ peripheral: CBPeripheral, advertisementData: [String : Any], RSSI: NSNumber) {
         if !nearbyPeripherals.contains(peripheral) {
             nearbyPeripherals.append(peripheral)
             nearbyPeripheralInfos[peripheral] = ["RSSI": RSSI, "advertisementData": advertisementData as AnyObject]
